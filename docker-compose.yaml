@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+    back:
+      container_name: infosel
+      restart: always
+      build: .
+      ports: 
+        - "4000:3000"
+      links:
+          - mongo
+      volumes:
+          - .:/usr/src/app
+    mongo:
+      container_name: infoseldatabase
+      image: mongo
+      ports: 
+        - "27017:27017"

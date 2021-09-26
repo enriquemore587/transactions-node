@@ -1,6 +1,13 @@
 const express = require('express');
 const app = express();
 const accountRoute = require('./routes/account.route')
+const mongoose = require('mongoose')
+const config = require('config');
+
+//Conectarnos a la BD
+mongoose.connect(config.get('configDB.HOST'), {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log('Conectado a MongoDB...'))
+    .catch(err => console.log('No se pudo conectar con MongoDB..', err));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
