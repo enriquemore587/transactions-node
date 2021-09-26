@@ -1,5 +1,5 @@
 module.exports = {
-	CHECKBOOK: "credit",
+	CHECKBOOK: "checkbook",
 	CREDIT: "credit",
 	DEBIT: "debit"
 }
