@@ -12,16 +12,18 @@ const userData = new mongoose.Schema({
         required: true
     },    
     sessionLogin: {
-        type: Boolean,
-        required: false
+        type: Date,
+        default: null
     },    
     token: {
         type: String,
-        required: true
+        required: false,
+        default: null
     },
     status: {
-        type: String,
-        required: true
+        type: Boolean,
+        required: true,
+        default: true
     },
     customer:{
         type: Schema.Types.ObjectId, ref: 'Customer',
