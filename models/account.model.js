@@ -10,19 +10,19 @@ const account = new mongoose.Schema({
     product:{
         type: String,
         required: true
-    },    
+    },
     accountBalance: {
-        type: Double,
+        type: Number,
         required: true,
-        default: 0
-    },    
+        default: 0.0
+    },
     status: {
         type: String,
         required: true
     },
     nip: {
-        type: Integer,
-        required: true        
+        type: String,
+        required: true
     },
     customer: {
         type: Schema.Types.ObjectId, ref: 'Customer',
